@@ -1,0 +1,66 @@
+/* General Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #d2cef3;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    background-image: url('../assets/images/header_bg.webp'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Container for Main Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+/* Sidebar (Navigation) */
+.sidebar {
+    background-color: #565657;
+    color: white;
+    padding: 2rem;
+    width: 20%;
+    min-height: 100vh;
+    max-width: 300px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
