@@ -2,17 +2,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Ensures padding doesn't affect element widths */
 }
 
 header {
-    background-color: #d2cef3;
+    background-color: #c1bedd;
     padding: 1.5rem;
     text-align: center;
     font-size: 2rem;
-    background-image: url('../assets/images/header_bg.webp'); /* Your background image */
+    background-image: url('../assets/images/banner.jpg'); /* Background image */
     background-size: cover;
     background-position: center;
-    color: white;
+    opacity: 0.8;
+    color: rgb(3, 3, 3);
 }
 
 /* Container for Main Layout */
@@ -20,6 +22,7 @@ header {
     display: flex;
     min-height: 100vh;
     flex-direction: row;
+    justify-content: space-between; /* Ensure equal spacing between sidebar and content */
 }
 
 /* Sidebar (Navigation) */
@@ -27,14 +30,16 @@ header {
     background-color: #565657;
     color: white;
     padding: 2rem;
-    width: 20%;
-    min-height: 100vh;
+    width: 10%; /* Fixed at 20% of the page */
     max-width: 300px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    min-height: 100vh;
 }
 
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Ensure no unexpected margins */
 }
 
 .sidebar ul li {
@@ -52,6 +57,8 @@ header {
     flex-grow: 1;
     padding: 2rem;
     background-color: #f4f4f4;
+    box-sizing: border-box; /* Ensure padding doesn’t affect content width */
+    overflow: auto; /* Prevents overflow of content */
 }
 
 /* Footer */
@@ -63,4 +70,55 @@ footer {
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+/* Verification Box and Button Styles */
+.verification-box {
+    border: 2px solid #565657;
+    padding: 10px;
+    margin-top: 1px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.verification-box h3 {
+    margin-bottom: 2px;
+    text-align: left;
+    padding-top: 2px;
+}
+
+.verification-box button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #565657;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.verification-box button:hover {
+    background-color: #7609dd;
+}
+
+
+/* Ball style */
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
